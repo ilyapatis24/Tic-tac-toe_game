@@ -1,6 +1,6 @@
 "use strict";
 
-let gameSymbols = ['x', 'o'];
+let players = ['x', 'o'];
 let activePlayer = 0;
 let board = [];
 
@@ -46,20 +46,20 @@ let checkWin = (board, row, column) => {
 
     for (let i = 0; i < board.length; i++) {
         // Проверка строк:
-        if (board[row][i] === gameSymbols[activePlayer]) {
+        if (board[row][i] === players[activePlayer]) {
             countRow += 1;
         }
         // Проверка столбцов:
-        if (board[i][column] === gameSymbols[activePlayer]) {
+        if (board[i][column] === players[activePlayer]) {
             countColumn += 1;
         }
         // Проверка главной диагонали:
-        if (board[i][i] === gameSymbols[activePlayer]) {
+        if (board[i][i] === players[activePlayer]) {
             countStepDown += 1;
         }
         // Проверка побочной диагонали:
         let j = board[i].length - 1 - i;
-        if (board[j][i] === gameSymbols[activePlayer]) {
+        if (board[j][i] === players[activePlayer]) {
             countStepUp += 1;
         }
     }
@@ -87,7 +87,7 @@ let startGame = () => {
 }
 
 let click = (row, column) => {
-    board[row][column] = gameSymbols[activePlayer];
+    board[row][column] = players[activePlayer];
     checkWin(board, row, column);
 
     renderBoard(board);
