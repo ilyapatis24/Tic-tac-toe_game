@@ -6,7 +6,7 @@
 
 [Стартовый код для реализации проекта](https://repl.it/@netology_pb/Diplom-startovyi-kod). Страница отображается во вкладке **result**, отладочная информация во вкладке **console**.
 
-![Image of the game](tictactoe.png)
+![Image of the game](images/tictactoe.png)
 
 ## Из чего состоит проект
 
@@ -103,6 +103,6 @@ renderBoard(board);
 
 ## Дополнительное задание
 
-Напишите код так, чтобы он работал на квадратном поле любого размера.
+- [X] Напишите код так, чтобы он работал на квадратном поле любого размера.
 
-
+[Ссылка на проект в Replit](https://replit.com/@ilyapatis24/Tic-tac-toegame)
